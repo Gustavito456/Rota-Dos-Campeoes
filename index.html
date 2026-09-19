@@ -9,7 +9,50 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <div id="app">
+  <div id="startFlow" class="start-flow" aria-live="polite">
+    <section id="startStepMenu" class="start-step active">
+      <div class="start-card start-hero-card">
+        <div class="start-logo">RC</div>
+        <span class="eyebrow">MANAGER DE FUTEBOL</span>
+        <h1>Rota dos Campeões</h1>
+        <p>Comece no Brasileirão, conduza seu clube por 38 rodadas e construa sua própria história.</p>
+        <div class="start-actions">
+          <button id="newCareerBtn" class="primary start-primary" type="button">Iniciar carreira</button>
+          <button id="continueCareerBtn" class="ghost start-secondary" type="button" hidden>Continuar carreira</button>
+        </div>
+        <small class="start-version">Temporada 2026 · versão inicial</small>
+      </div>
+    </section>
+
+    <section id="startStepLeague" class="start-step">
+      <div class="start-panel">
+        <button id="backToMenuBtn" class="ghost start-back" type="button">← Voltar</button>
+        <span class="eyebrow">PASSO 1 DE 2</span>
+        <h2>Escolha a liga</h2>
+        <p>Novas ligas poderão ser adicionadas futuramente.</p>
+        <button id="leagueBrasileiraoBtn" class="league-choice" type="button">
+          <span class="league-icon">BR</span>
+          <span><strong>Brasileirão Série A</strong><small>Brasil · 20 clubes · 38 rodadas · 2026</small></span>
+          <span class="league-arrow">→</span>
+        </button>
+      </div>
+    </section>
+
+    <section id="startStepClub" class="start-step">
+      <div class="start-panel start-panel-wide">
+        <button id="backToLeagueBtn" class="ghost start-back" type="button">← Ligas</button>
+        <span class="eyebrow">PASSO 2 DE 2</span>
+        <h2>Escolha seu clube</h2>
+        <p>Você comandará este clube durante a carreira.</p>
+        <div id="clubPicker" class="club-picker"></div>
+        <div class="dialog-actions">
+          <button id="startBtn" class="primary" type="button" disabled>Começar carreira</button>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <div id="app" class="game-shell is-hidden">
     <header class="topbar">
       <button class="brand" data-nav="home" aria-label="Ir ao início">
         <span class="brand-mark">RC</span>
@@ -48,20 +91,6 @@
       </main>
     </div>
   </div>
-
-  <dialog id="newGameDialog">
-    <form method="dialog" id="newGameForm">
-      <div class="dialog-head">
-        <span class="eyebrow">NOVA CARREIRA</span>
-        <h1>Escolha seu clube</h1>
-        <p>Brasileirão Série A 2026. O save fica somente neste navegador.</p>
-      </div>
-      <div id="clubPicker" class="club-picker"></div>
-      <div class="dialog-actions">
-        <button id="startBtn" class="primary" value="default" disabled>Começar carreira</button>
-      </div>
-    </form>
-  </dialog>
 
   <div id="toast" class="toast" role="status" aria-live="polite"></div>
 

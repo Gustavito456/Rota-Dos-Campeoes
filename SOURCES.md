@@ -29,3 +29,11 @@ Bahia e Grêmio 2; Athletico, Coritiba, Guarani e Sport 1.
 
 Observação: contagens históricas do Campeonato Brasileiro podem variar conforme a convenção usada para 1987.
 O jogo adota Flamengo com 9 títulos, seguindo fontes esportivas que contabilizam 1987 para o clube.
+
+
+## Idades dos jogadores
+O jogo prioriza idades confirmadas por bases públicas de elenco. Quando a consulta externa não retorna um jogador ou é bloqueada pelo navegador, a interface usa temporariamente uma idade estimada pelo próprio jogo, marcada com `~`.
+
+Esse marcador é intencional: uma idade estimada não deve ser confundida com um dado factual confirmado. À medida que dados verificados forem incorporados ao banco local, o símbolo deixa de aparecer para esses atletas.
+
+Também foram consultadas páginas de elenco detalhado do Transfermarkt para conferir idades de referência em jogadores presentes na base.

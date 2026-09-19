@@ -18,7 +18,7 @@
 
 ## ⚽ Sobre o projeto
 
-**Rota dos Campeões** é um jogo de gerenciamento de futebol executado diretamente no navegador. A primeira versão concentra-se no **Campeonato Brasileiro Série A de 2026** e foi planejada para funcionar sem servidor, banco de dados ou instalação obrigatória.
+**Rota dos Campeões** é um jogo de gerenciamento de futebol executado diretamente no navegador. A primeira versão concentra-se no **Campeonato Brasileiro Série A de 2026**. O fluxo inicial já foi preparado para receber outras ligas futuramente e foi planejada para funcionar sem servidor, banco de dados ou instalação obrigatória.
 
 O jogador escolhe um dos 20 clubes, administra o elenco, define formação e mentalidade, acompanha o calendário, simula partidas e tenta terminar as 38 rodadas no topo da classificação.
 
@@ -28,6 +28,8 @@ A proposta é preservar a simplicidade dos managers clássicos, porém com inter
 
 - ✅ 20 clubes da Série A 2026
 - ✅ 717 jogadores na base inicial
+- ✅ menu inicial com opção de iniciar ou continuar carreira
+- ✅ fluxo de seleção de liga → clube
 - ✅ seleção de clube e criação de carreira
 - ✅ campeonato completo com 38 rodadas
 - ✅ turno e returno gerados automaticamente
@@ -38,6 +40,7 @@ A proposta é preservar a simplicidade dos managers clássicos, porém com inter
 - ✅ mentalidade defensiva, equilibrada e ofensiva
 - ✅ escalação automática por OVR RC
 - ✅ pesquisa e filtro de jogadores
+- ✅ idade visível para todos os jogadores; idades ainda não confirmadas são marcadas com `~`
 - ✅ índices próprios **OVR RC** e **POT RC**
 - ✅ ranking histórico dos campeões brasileiros
 - ✅ save automático com `localStorage`

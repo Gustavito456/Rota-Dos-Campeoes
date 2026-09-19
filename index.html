@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#0b1510">
+  <title>Rota dos Campeões — Manager</title>
+  <meta name="description" content="Rota dos Campeões: manager de futebol brasileiro em navegador.">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div id="app">
+    <header class="topbar">
+      <button class="brand" data-nav="home" aria-label="Ir ao início">
+        <span class="brand-mark">RC</span>
+        <span><strong>Rota dos Campeões</strong><small>Brasileirão Série A · 2026</small></span>
+      </button>
+      <div class="top-actions">
+        <span id="saveState" class="save-state">save local</span>
+        <button id="resetBtn" class="ghost danger" type="button">Novo jogo</button>
+      </div>
+    </header>
+
+    <div class="layout">
+      <aside class="sidebar" aria-label="Navegação principal">
+        <nav id="nav">
+          <button class="nav-btn active" data-view="home"><span>⌂</span>Início</button>
+          <button class="nav-btn" data-view="squad"><span>♟</span>Elenco</button>
+          <button class="nav-btn" data-view="tactics"><span>▦</span>Tática</button>
+          <button class="nav-btn" data-view="fixtures"><span>◫</span>Jogos</button>
+          <button class="nav-btn" data-view="table"><span>≡</span>Tabela</button>
+          <button class="nav-btn" data-view="competition"><span>★</span>Competição</button>
+        </nav>
+        <div class="season-box">
+          <small>Temporada</small>
+          <strong>2026</strong>
+          <span id="roundSide">Rodada 1/38</span>
+        </div>
+      </aside>
+
+      <main id="main" tabindex="-1">
+        <section id="view-home" class="view active"></section>
+        <section id="view-squad" class="view"></section>
+        <section id="view-tactics" class="view"></section>
+        <section id="view-fixtures" class="view"></section>
+        <section id="view-table" class="view"></section>
+        <section id="view-competition" class="view"></section>
+      </main>
+    </div>
+  </div>
+
+  <dialog id="newGameDialog">
+    <form method="dialog" id="newGameForm">
+      <div class="dialog-head">
+        <span class="eyebrow">NOVA CARREIRA</span>
+        <h1>Escolha seu clube</h1>
+        <p>Brasileirão Série A 2026. O save fica somente neste navegador.</p>
+      </div>
+      <div id="clubPicker" class="club-picker"></div>
+      <div class="dialog-actions">
+        <button id="startBtn" class="primary" value="default" disabled>Começar carreira</button>
+      </div>
+    </form>
+  </dialog>
+
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
